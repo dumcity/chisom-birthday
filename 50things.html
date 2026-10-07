@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>50 Things I Love About You ♡</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #e8dcff;
+
+            color: #5d476d;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+        }
+
+
+        /* =========================
+           LACE
+        ========================= */
+
+        .lace {
+            height: 22px;
+
+            width: 100%;
+
+            position: fixed;
+
+            left: 0;
+
+            z-index: 10;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #c6a5e8 4px,
+                    transparent 5px
+                );
+
+            background-size: 24px 18px;
+        }
+
+
+        .top {
+            top: 0;
+
+            border-bottom:
+                1px solid #c8a9e8;
+        }
+
+
+        .bottom {
+            bottom: 0;
+
+            border-top:
+                1px solid #c8a9e8;
+        }
+
+
+        /* =========================
+           BOWS
+        ========================= */
+
+        .bow {
+            position: absolute;
+
+            top: 55px;
+
+            font-size: 42px;
+        }
+
+
+        .bow-left {
+            left: 35px;
+
+            transform: rotate(-8deg);
+        }
+
+
+        .bow-right {
+            right: 35px;
+
+            transform: rotate(8deg);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            text-align: center;
+
+            padding:
+                85px 20px 40px;
+        }
+
+
+        .tiny-bow {
+            font-size: 34px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .title {
+            font-family:
+                "Ballet",
+                cursive;
+
+            font-size:
+                clamp(75px, 11vw, 130px);
+
+            line-height: 0.85;
+
+            color: #8959b0;
+        }
+
+
+        .subtitle {
+            margin-top: 25px;
+
+            font-size: 24px;
+
+            font-style: italic;
+
+            color: #745581;
+        }
+
+
+        /* =========================
+           LIST CARD
+        ========================= */
+
+        .love-card {
+            width:
+                min(900px, 90%);
+
+            margin:
+                20px auto 80px;
+
+            padding:
+                55px 60px 70px;
+
+            background:
+                rgba(255, 251, 255, 0.96);
+
+            border:
+                1px solid #c8a9e8;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 12px 35px
+                rgba(92, 63, 115, 0.15);
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            text-align: center;
+
+            font-size: 21px;
+
+            line-height: 1.7;
+
+            margin:
+                0 auto 40px;
+
+            max-width: 650px;
+
+            font-style: italic;
+        }
+
+
+        .divider {
+            text-align: center;
+
+            color: #9a6bc0;
+
+            font-size: 26px;
+
+            letter-spacing: 7px;
+
+            margin:
+                35px 0;
+        }
+
+
+        /* =========================
+           EACH THING
+        ========================= */
+
+        .love-item {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 18px;
+
+            margin-bottom: 20px;
+
+            padding:
+                15px 18px;
+
+            border-radius: 18px;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .love-item:hover {
+            background: #f7f0ff;
+
+            transform:
+                translateX(4px);
+        }
+
+
+        .number {
+            flex-shrink: 0;
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #dfc8f5;
+
+            color: #70428e;
+
+            font-size: 18px;
+
+            font-weight: 600;
+        }
+
+
+        .love-text {
+            font-size: 20px;
+
+            line-height: 1.55;
+
+            padding-top: 4px;
+        }
+
+
+        /* =========================
+           FINAL MESSAGE
+        ========================= */
+
+        .final-message {
+            text-align: center;
+
+            margin-top: 55px;
+        }
+
+
+        .final-title {
+            font-family:
+                "Ballet",
+                cursive;
+
+            font-size: 57px;
+
+            color: #8c5ab2;
+
+            line-height: 1;
+        }
+
+
+        .final-text {
+            font-size: 20px;
+
+            font-style: italic;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           NEXT PAGE
+        ========================= */
+
+        .next-page-area {
+            text-align: center;
+
+            margin-top: 70px;
+
+            padding-top: 35px;
+
+            border-top:
+                1px dashed #c4a2e4;
+        }
+
+
+        .turn-page {
+            font-size: 18px;
+
+            font-style: italic;
+
+            color: #7a6086;
+
+            margin-bottom: 8px;
+        }
+
+
+        .next-page {
+            display: inline-block;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 28px;
+
+            font-weight: 600;
+
+            color: #75449b;
+
+            text-decoration: none;
+
+            padding:
+                12px 25px;
+
+            border:
+                1px solid #b88bd9;
+
+            border-radius: 30px;
+
+            background:
+                #f7f0ff;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .next-page:hover {
+            transform:
+                translateX(8px);
+
+            background:
+                #efe3ff;
+        }
+
+
+        .arrow {
+            font-size: 32px;
+
+            margin-left: 8px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .bow {
+                font-size: 30px;
+
+                top: 48px;
+            }
+
+
+            .bow-left {
+                left: 10px;
+            }
+
+
+            .bow-right {
+                right: 10px;
+            }
+
+
+            .love-card {
+                width: 90%;
+
+                padding:
+                    40px 20px 55px;
+            }
+
+
+            .love-item {
+                gap: 13px;
+
+                padding:
+                    13px 8px;
+            }
+
+
+            .number {
+                width: 34px;
+
+                height: 34px;
+
+                font-size: 16px;
+            }
+
+
+            .love-text {
+                font-size: 18px;
+            }
+
+
+            .next-page {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- DECORATION -->
+
+    <div class="lace top"></div>
+
+    <div class="lace bottom"></div>
+
+
+    <div class="bow bow-left">
+        🎀
+    </div>
+
+
+    <div class="bow bow-right">
+        🎀
+    </div>
+
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="tiny-bow">
+            🎀
+        </div>
+
+
+        <div class="title">
+            50 Things
+        </div>
+
+
+        <div class="subtitle">
+            I love about you ♡
+        </div>
+
+    </header>
+
+
+
+    <!-- 50 THINGS -->
+
+    <main class="love-card">
+
+
+        <p class="intro">
+            Because apparently 50 reasons still isn't enough to explain
+            how much I love you. ♡
+        </p>
+
+
+
+        <div class="divider">
+            ♡ ✦ 🎀 ✦ ♡
+        </div>
+
+
+
+        <div class="love-item">
+            <div class="number">1</div>
+            <div class="love-text">
+                I love how excited you get when you’re talking about something you like.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">2</div>
+            <div class="love-text">
+                I love how caring you are towards your friends.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">3</div>
+            <div class="love-text">
+                I love how you’re always there for the people you care about.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">4</div>
+            <div class="love-text">
+                I love your independence.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">5</div>
+            <div class="love-text">
+                I love how all your features complement each other.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">6</div>
+            <div class="love-text">
+                I love your clear skin.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">7</div>
+            <div class="love-text">
+                I love that I can gossip with you.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">8</div>
+            <div class="love-text">
+                I love your bad mouth. 😂
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">9</div>
+            <div class="love-text">
+                I love your advice, even when I don’t take it.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">10</div>
+            <div class="love-text">
+                I love how I can always come to you with my problems.
+            </div>
+        </div>
+
+
+
+        <div class="divider">
+            ♡ ✦ ♡
+        </div>
+
+
+
+        <div class="love-item">
+            <div class="number">11</div>
+            <div class="love-text">
+                I love how you always have your friends’ backs.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">12</div>
+            <div class="love-text">
+                I love (and dislike) your rage-baiting. 😂
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">13</div>
+            <div class="love-text">
+                I love your relationship with God.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">14</div>
+            <div class="love-text">
+                I love how maturely you handle situations.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">15</div>
+            <div class="love-text">
+                I love your weird obsession with celebrities. 😂
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">16</div>
+            <div class="love-text">
+                I love that you understand Devi and Lara Jean. I genuinely feel like we’re the only ones who get them.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">17</div>
+            <div class="love-text">
+                I love your stalking skills. 😭
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">18</div>
+            <div class="love-text">
+                I love how, even after leaving Nigeria, you never changed your accent.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">19</div>
+            <div class="love-text">
+                I love your love for booboos, and I think they suit you so well.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">20</div>
+            <div class="love-text">
+                I love your one-sided beef with Ufuoma and Archiebong. 😂
+            </div>
+        </div>
+
+
+
+        <div class="divider">
+            ♡ ✦ 🎀 ✦ ♡
+        </div>
+
+
+
+        <div class="love-item">
+            <div class="number">21</div>
+            <div class="love-text">
+                I love your relationship with your siblings.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">22</div>
+            <div class="love-text">
+                I love how you aren’t a selfish person, but you aren’t completely selfless either.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">23</div>
+            <div class="love-text">
+                I love how dramatic you are.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">24</div>
+            <div class="love-text">
+                I love your eyebrows.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">25</div>
+            <div class="love-text">
+                I love how real you are.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">26</div>
+            <div class="love-text">
+                I love how relatable you are.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">27</div>
+            <div class="love-text">
+                I love your determination.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">28</div>
+            <div class="love-text">
+                I love your music taste.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">29</div>
+            <div class="love-text">
+                I love how open-minded you are.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">30</div>
+            <div class="love-text">
+                I love your lashes. They always suit your eye shape so well.
+            </div>
+        </div>
+
+
+
+        <div class="divider">
+            ♡ ✦ ♡
+        </div>
+
+
+
+        <div class="love-item">
+            <div class="number">31</div>
+            <div class="love-text">
+                I love how you’re always the lively and excited one whenever you’re around people.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">32</div>
+            <div class="love-text">
+                I love how genuinely happy you are for other people’s success.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">33</div>
+            <div class="love-text">
+                I love how you uplift, hype, and encourage the people around you.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">34</div>
+            <div class="love-text">
+                I love how deeply you love and care for your loved ones.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">35</div>
+            <div class="love-text">
+                I love how highly you speak of your mom.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">36</div>
+            <div class="love-text">
+                I love how you can wear one particular necklace for the rest of your life. 😂
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">37</div>
+            <div class="love-text">
+                I love your judgmental facial expressions. 😭
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">38</div>
+            <div class="love-text">
+                I love how you do duck lips in practically all your pictures and videos. 😂
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">39</div>
+            <div class="love-text">
+                I love how thoughtful you are.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">40</div>
+            <div class="love-text">
+                I love how much you want the soft life.
+            </div>
+        </div>
+
+
+
+        <div class="divider">
+            ♡ ✦ 🎀 ✦ ♡
+        </div>
+
+
+
+        <div class="love-item">
+            <div class="number">41</div>
+            <div class="love-text">
+                I love how you try to avoid unnecessary problems with people.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">42</div>
+            <div class="love-text">
+                I love how you can drink 100 bottles of water in one day. 😭
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">43</div>
+            <div class="love-text">
+                I love your body shape.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">44</div>
+            <div class="love-text">
+                I love your big bum bum. 😂
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">45</div>
+            <div class="love-text">
+                I love your TikTok drafts. I genuinely wish you would post them.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">46</div>
+            <div class="love-text">
+                I love how you connect with people.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">47</div>
+            <div class="love-text">
+                I love how kind-hearted you are.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">48</div>
+            <div class="love-text">
+                I love your nose. It’s so small and defined.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">49</div>
+            <div class="love-text">
+                I love your skin tone.
+            </div>
+        </div>
+
+
+        <div class="love-item">
+            <div class="number">50</div>
+            <div class="love-text">
+                I love how thick and full your hair is.
+            </div>
+        </div>
+
+
+
+        <!-- FINAL MESSAGE -->
+
+        <div class="final-message">
+
+            <div class="final-title">
+                And that's only the beginning ♡
+            </div>
+
+            <div class="final-text">
+                I could honestly keep going...
+            </div>
+
+        </div>
+
+
+
+        <!-- NEXT PAGE -->
+
+        <div class="next-page-area">
+
+            <div class="turn-page">
+                there's still more ♡
+            </div>
+
+            <a href="reminders.html" class="next-page">
+    Next Page
+    <span class="arrow">→</span>
+</a>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

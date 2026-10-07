@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Things That Remind Me of You ♡</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #e8dcff;
+            color: #5d476d;
+            font-family: "Cormorant Garamond", Georgia, serif;
+        }
+
+        /* DECORATIVE BORDERS */
+
+        .lace {
+            height: 22px;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #c6a5e8 4px,
+                    transparent 5px
+                );
+
+            background-size: 24px 18px;
+        }
+
+        .top {
+            top: 0;
+            border-bottom: 1px solid #c8a9e8;
+        }
+
+        .bottom {
+            bottom: 0;
+            border-top: 1px solid #c8a9e8;
+        }
+
+        /* BOWS */
+
+        .bow {
+            position: absolute;
+            top: 55px;
+            font-size: 42px;
+        }
+
+        .bow-left {
+            left: 35px;
+            transform: rotate(-8deg);
+        }
+
+        .bow-right {
+            right: 35px;
+            transform: rotate(8deg);
+        }
+
+        /* HEADER */
+
+        .header {
+            text-align: center;
+            padding: 85px 20px 40px;
+        }
+
+        .tiny-bow {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-family: "Ballet", cursive;
+            font-size: clamp(65px, 10vw, 115px);
+            line-height: 0.9;
+            color: #8959b0;
+        }
+
+        .subtitle {
+            margin-top: 25px;
+            font-size: 22px;
+            font-style: italic;
+            color: #745581;
+        }
+
+        /* MAIN CARD */
+
+        .reminder-card {
+            width: min(900px, 90%);
+            margin: 20px auto 80px;
+            padding: 55px 60px 70px;
+
+            background: rgba(255, 251, 255, 0.96);
+
+            border: 1px solid #c8a9e8;
+            border-radius: 28px;
+
+            box-shadow:
+                0 12px 35px rgba(92, 63, 115, 0.15);
+        }
+
+        /* INTRODUCTION */
+
+        .intro {
+            text-align: center;
+            font-size: 23px;
+            line-height: 1.7;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto 35px;
+        }
+
+        .divider {
+            text-align: center;
+            color: #9a6bc0;
+            font-size: 26px;
+            letter-spacing: 7px;
+            margin: 35px 0;
+        }
+
+        /* REMINDER ITEMS */
+
+        .reminder-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            margin-bottom: 16px;
+            padding: 14px 18px;
+
+            border-radius: 18px;
+
+            transition: 0.2s ease;
+        }
+
+        .reminder-item:hover {
+            background: #f7f0ff;
+            transform: translateX(5px);
+        }
+
+        .number {
+            flex-shrink: 0;
+
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #dfc8f5;
+            color: #70428e;
+
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .reminder-text {
+            font-size: 21px;
+            line-height: 1.5;
+        }
+
+        /* SPECIAL ENDING */
+
+        .ending {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .ending-title {
+            font-family: "Ballet", cursive;
+            font-size: 57px;
+            color: #8c5ab2;
+            line-height: 1;
+        }
+
+        .ending-text {
+            font-size: 21px;
+            font-style: italic;
+            margin-top: 18px;
+        }
+
+        /* PREVIOUS PAGE */
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 70px;
+            padding-top: 30px;
+
+            border-top: 1px dashed #c4a2e4;
+        }
+
+        .previous-page,
+        .next-page {
+            color: #75449b;
+            text-decoration: none;
+
+            font-size: 23px;
+            font-weight: 600;
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            background: #f7f0ff;
+
+            border: 1px solid #b88bd9;
+
+            transition: 0.2s ease;
+        }
+
+        .previous-page:hover {
+            transform: translateX(-6px);
+        }
+
+        .next-page:hover {
+            transform: translateX(6px);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .bow {
+                font-size: 30px;
+                top: 48px;
+            }
+
+            .bow-left {
+                left: 10px;
+            }
+
+            .bow-right {
+                right: 10px;
+            }
+
+            .reminder-card {
+                width: 90%;
+                padding: 40px 20px 55px;
+            }
+
+            .reminder-item {
+                gap: 13px;
+                padding: 12px 7px;
+            }
+
+            .number {
+                width: 34px;
+                height: 34px;
+                font-size: 16px;
+            }
+
+            .reminder-text {
+                font-size: 19px;
+            }
+
+            .navigation {
+                gap: 10px;
+            }
+
+            .previous-page,
+            .next-page {
+                font-size: 19px;
+                padding: 9px 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- DECORATION -->
+
+    <div class="lace top"></div>
+    <div class="lace bottom"></div>
+
+    <div class="bow bow-left">
+        🎀
+    </div>
+
+    <div class="bow bow-right">
+        🎀
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="tiny-bow">
+            🎀
+        </div>
+
+        <div class="title">
+            Things That Remind Me
+        </div>
+
+        <div class="subtitle">
+            of you ♡
+        </div>
+
+    </header>
+
+
+    <!-- REMINDERS -->
+
+    <main class="reminder-card">
+
+
+        <p class="intro">
+            Long distance but there are still some things, words,
+            and people that remind me of you. ♡
+        </p>
+
+
+        <div class="divider">
+            ♡ ✦ 🎀 ✦ ♡
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">1</div>
+            <div class="reminder-text">Devi</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">2</div>
+            <div class="reminder-text">Miguel</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">3</div>
+            <div class="reminder-text">The Kardashians</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">4</div>
+            <div class="reminder-text">Any makeup brand</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">5</div>
+            <div class="reminder-text">Cluster lashes</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">6</div>
+            <div class="reminder-text">Mariah the Scientist</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">7</div>
+            <div class="reminder-text">Love Island</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">8</div>
+            <div class="reminder-text">Waist trainers</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">9</div>
+            <div class="reminder-text">Water (cause you drink water a lot)</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">10</div>
+            <div class="reminder-text">Hallelujah Challenge</div>
+        </div>
+
+
+        <div class="divider">
+            ♡ ✦ ♡
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">11</div>
+            <div class="reminder-text">Muna Slay Queen</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">12</div>
+            <div class="reminder-text">Afang soup</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">13</div>
+            <div class="reminder-text">Those Asian YouTubers</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">14</div>
+            <div class="reminder-text">SHEIN</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">15</div>
+            <div class="reminder-text">Skincare</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">16</div>
+            <div class="reminder-text">Bob wigs</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">17</div>
+            <div class="reminder-text">Curly short wigs</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">18</div>
+            <div class="reminder-text">Microblading</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">19</div>
+            <div class="reminder-text">Conrad</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">20</div>
+            <div class="reminder-text">Gossiping</div>
+        </div>
+
+
+        <div class="divider">
+            ♡ ✦ 🎀 ✦ ♡
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">21</div>
+            <div class="reminder-text">Duck lips</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">22</div>
+            <div class="reminder-text">Necklace</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">23</div>
+            <div class="reminder-text">Funke Akindele</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">24</div>
+            <div class="reminder-text">Mirror pictures</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">25</div>
+            <div class="reminder-text">TikTok drafts</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">26</div>
+            <div class="reminder-text">Owambe</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">27</div>
+            <div class="reminder-text">Long late night calls</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">28</div>
+            <div class="reminder-text">Munachi</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">29</div>
+            <div class="reminder-text">Okra soup</div>
+        </div>
+
+
+        <div class="reminder-item">
+            <div class="number">30</div>
+            <div class="reminder-text">Teni brothers</div>
+        </div>
+
+
+        <!-- ENDING -->
+
+        <div class="ending">
+
+            <div class="ending-title">
+                Distance doesn't change that ♡
+            </div>
+
+            <div class="ending-text">
+                Somehow, little things still bring you back to me.
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="navigation">
+
+            <a
+                href="50things.html"
+                class="previous-page"
+            >
+                ← Previous Page
+            </a>
+
+
+            <a href="youngus.html" class="next-page">
+    Next Page
+    <span class="arrow">→</span>
+</a>
+
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Letter for Chisom ♡</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #e8dcff;
+            color: #5d476d;
+            font-family: "Cormorant Garamond", Georgia, serif;
+        }
+
+        /* TOP AND BOTTOM DECORATION */
+
+        .lace {
+            height: 22px;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            z-index: 10;
+            background:
+                radial-gradient(circle, #c6a5e8 4px, transparent 5px);
+            background-size: 24px 18px;
+        }
+
+        .top {
+            top: 0;
+            border-bottom: 1px solid #c8a9e8;
+        }
+
+        .bottom {
+            bottom: 0;
+            border-top: 1px solid #c8a9e8;
+        }
+
+        /* BOWS */
+
+        .bow {
+            position: absolute;
+            font-size: 42px;
+            top: 55px;
+        }
+
+        .bow-left {
+            left: 35px;
+            transform: rotate(-8deg);
+        }
+
+        .bow-right {
+            right: 35px;
+            transform: rotate(8deg);
+        }
+
+        /* HEADER */
+
+        .header {
+            text-align: center;
+            padding: 85px 20px 35px;
+        }
+
+        .tiny-bow {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-family: "Ballet", cursive;
+            font-size: clamp(65px, 10vw, 115px);
+            line-height: 0.9;
+            color: #8959b0;
+        }
+
+        .subtitle {
+            margin-top: 20px;
+            font-size: 22px;
+            font-style: italic;
+            color: #745581;
+        }
+
+        /* LETTER CARD */
+
+        .letter-card {
+            width: min(850px, 90%);
+            margin: 20px auto 80px;
+            padding: 55px 65px 70px;
+
+            background: rgba(255, 251, 255, 0.96);
+
+            border: 1px solid #c8a9e8;
+            border-radius: 28px;
+
+            box-shadow:
+                0 12px 35px rgba(92, 63, 115, 0.15);
+
+            position: relative;
+        }
+
+        /* CORNER HEARTS */
+
+        .corner-heart {
+            position: absolute;
+            font-size: 25px;
+            color: #a678ca;
+        }
+
+        .top-left {
+            top: 18px;
+            left: 22px;
+        }
+
+        .top-right {
+            top: 18px;
+            right: 22px;
+        }
+
+        .bottom-left {
+            bottom: 18px;
+            left: 22px;
+        }
+
+        .bottom-right {
+            bottom: 18px;
+            right: 22px;
+        }
+
+        /* LETTER */
+
+        .opening {
+            font-family: "Ballet", cursive;
+            color: #8c5ab2;
+            font-size: 55px;
+            margin: 0 0 30px;
+            line-height: 1;
+        }
+
+        .letter-card p {
+            font-size: 21px;
+            line-height: 1.85;
+            margin: 0 0 28px;
+        }
+
+        /* DECORATIVE DIVIDERS */
+
+        .divider {
+            text-align: center;
+            color: #9a6bc0;
+            font-size: 26px;
+            letter-spacing: 7px;
+            margin: 40px 0;
+        }
+
+        /* ENDING */
+
+        .ending {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .birthday-ending {
+            font-family: "Ballet", cursive;
+            color: #8c5ab2;
+            font-size: 53px !important;
+            line-height: 1.1 !important;
+            margin-bottom: 8px !important;
+        }
+
+        .signature {
+            font-size: 25px !important;
+            font-style: italic;
+        }
+
+        /* PHOTOS */
+
+        .photos-title {
+            text-align: center;
+            font-family: "Ballet", cursive;
+            color: #8c5ab2;
+            font-size: 52px;
+            margin: 65px 0 30px;
+        }
+
+        .photos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .photo-frame {
+            width: 255px;
+            background: white;
+            padding: 9px 9px 22px;
+
+            box-shadow:
+                0 8px 20px rgba(90, 60, 120, 0.18);
+
+            transform: rotate(-3deg);
+        }
+
+        .photo-frame:nth-child(2) {
+            transform: rotate(3deg);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-caption {
+            text-align: center;
+            font-size: 17px;
+            font-style: italic;
+            margin-top: 8px;
+            color: #70527d;
+        }
+
+        /* NEXT PAGE */
+
+        .next-page-area {
+            text-align: center;
+            margin-top: 75px;
+            padding-top: 35px;
+            border-top: 1px dashed #c4a2e4;
+        }
+
+        .turn-page {
+            font-size: 18px;
+            font-style: italic;
+            color: #7a6086;
+            margin-bottom: 8px;
+        }
+
+        .next-page {
+            display: inline-block;
+
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 28px;
+            font-weight: 600;
+
+            color: #75449b;
+            text-decoration: none;
+
+            padding: 12px 25px;
+
+            border: 1px solid #b88bd9;
+            border-radius: 30px;
+
+            background: #f7f0ff;
+
+            transition: 0.2s ease;
+        }
+
+        .next-page:hover {
+            transform: translateX(8px);
+            background: #efe3ff;
+        }
+
+        .arrow {
+            font-size: 32px;
+            margin-left: 8px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .bow {
+                font-size: 30px;
+                top: 48px;
+            }
+
+            .bow-left {
+                left: 10px;
+            }
+
+            .bow-right {
+                right: 10px;
+            }
+
+            .header {
+                padding-top: 75px;
+            }
+
+            .letter-card {
+                width: 90%;
+                padding: 45px 27px 55px;
+            }
+
+            .opening {
+                font-size: 45px;
+            }
+
+            .letter-card p {
+                font-size: 19px;
+                line-height: 1.75;
+            }
+
+            .photo-frame {
+                width: 230px;
+            }
+
+            .photo-frame img {
+                height: 285px;
+            }
+
+            .next-page {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- DECORATION -->
+
+    <div class="lace top"></div>
+    <div class="lace bottom"></div>
+
+    <div class="bow bow-left">🎀</div>
+    <div class="bow bow-right">🎀</div>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="tiny-bow">🎀</div>
+
+        <div class="title">
+            A Little Letter
+        </div>
+
+        <div class="subtitle">
+            for my Chisom ♡
+        </div>
+
+    </header>
+
+
+    <!-- LETTER -->
+
+    <main class="letter-card">
+
+        <div class="corner-heart top-left">♡</div>
+        <div class="corner-heart top-right">♡</div>
+
+
+        <p class="opening">
+            Happy birthday Chisommmm
+        </p>
+
+
+        <p>
+            You’re Big 18 now. The biggest. I wish I was there with you
+            to celebrate you. If I ever have the opportunity to visit
+            Canada nah Vancouver I go go 😭. I miss you so muchhhh.
+            Like I really do. I know we gist a lot but it would be 10x
+            better if it was physical. I know im not always available
+            and I miss your calls a lot and I really feel bad about it.
+            I’m so sorry about it.
+        </p>
+
+
+        <p>
+            I love you so much. You literally give the best advice
+            everytime. I love how you always have my back and you have
+            personal beef people that treat me badly 😂. And I’ll always
+            have your back too and one sided beef with people that has
+            ever mistreat you.
+        </p>
+
+
+        <p>
+            You’re such a good friend. Like literally the realest.
+            You don’t sugarcoat bs and you don’t support bs either.
+            But you’re not weird about it. I pray every person you come
+            across treats you well cause you deserve the world.
+            The wholesome solar system sef with heaven join.
+        </p>
+
+
+        <div class="divider">
+            ♡ ✦ 🎀 ✦ ♡
+        </div>
+
+
+        <p>
+            Im happy that our friendship hasn’t died and I hope it never
+            dies. We’re still traveling the world after graduation sha.
+            I can’t wait for you to visit Nigeria I really really miss you.
+            I pray you achieve all your goals and dreams. May God be with
+            you at every stage in your life.
+        </p>
+
+
+        <p>
+            You’re an adult now so more responsibility. It’s so cool how
+            your coping alone in Canada without family members.
+            I couldn’t never do that.
+        </p>
+
+
+        <div class="divider">
+            ♡ ✦ ♡ ✦ ♡
+        </div>
+
+
+        <p>
+            Youre such a beautiful person inside and outside. Body so
+            curvy and shaped like an hourglass fr. caramel skin just dey
+            shine and glow everyday. Youre hair is naw full and thick.
+            Eyebrow are always shaped perfaectly. Face card so lethal.
+            The baddest baddie fr. Everything just tea. The teaest tea
+            to ever tea. Your parents literally made an art with a
+            gorgous soul. You give all those extremely rich beautiful
+            aunties that everyone looks up to.
+        </p>
+
+
+        <div class="divider">
+            ♡ 🎀 ♡
+        </div>
+
+
+        <!-- ENDING -->
+
+        <div class="ending">
+
+            <p class="birthday-ending">
+                Happy birthday Chisom 💕
+            </p>
+
+            <p>
+                I love you so much 😘
+            </p>
+
+            <p class="signature">
+                - Dumcity ❤️
+            </p>
+
+        </div>
+
+
+        <!-- PHOTOS -->
+
+        <div class="photos-title">
+            My birthday girl ♡
+        </div>
+
+
+        <div class="photos">
+
+            <div class="photo-frame">
+
+                <img
+                    src="chisom1.jpeg"
+                    alt="Chisom"
+                >
+
+                <div class="photo-caption">
+                    pretty girl 🎀
+                </div>
+
+            </div>
+
+
+            <div class="photo-frame">
+
+                <img
+                    src="chisom2.jpeg"
+                    alt="Chisom"
+                >
+
+                <div class="photo-caption">
+                    birthday baddie ♡
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NEXT PAGE -->
+
+        <div class="next-page-area">
+
+            <div class="turn-page">
+                ready for the next page? ♡
+            </div>
+
+            <a href="50things.html" class="next-page">
+                Next Page
+                <span class="arrow">→</span>
+            </a>
+
+        </div>
+
+
+        <div class="corner-heart bottom-left">♡</div>
+        <div class="corner-heart bottom-right">♡</div>
+
+    </main>
+
+</body>
+
+</html>

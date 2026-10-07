@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Chisom ♡</title>
+
+    <!-- Pretty script font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #fff0f6;
+            color: #df6f9b;
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           MAIN SCREEN
+        ========================= */
+
+        .welcome {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            position: relative;
+
+            padding: 40px;
+        }
+
+
+        /* =========================
+           LACE-STYLE BORDERS
+        ========================= */
+
+        .lace {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 34px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(238, 151, 182, 0.55) 4px,
+                    transparent 5px
+                );
+
+            background-size: 25px 25px;
+
+            opacity: 0.55;
+        }
+
+        .lace.top {
+            top: 0;
+            border-bottom: 1px solid #efb3ca;
+        }
+
+        .lace.bottom {
+            bottom: 0;
+            border-top: 1px solid #efb3ca;
+        }
+
+
+        /* =========================
+           BOWS
+        ========================= */
+
+        .bow {
+            position: absolute;
+            font-size: 48px;
+
+            filter: drop-shadow(
+                1px 3px 3px rgba(180, 80, 120, 0.15)
+            );
+        }
+
+        .bow.top-left {
+            top: 55px;
+            left: 55px;
+            transform: rotate(-8deg);
+        }
+
+        .bow.top-right {
+            top: 55px;
+            right: 55px;
+            transform: rotate(8deg);
+        }
+
+        .bow.bottom-left {
+            bottom: 45px;
+            left: 55px;
+            transform: rotate(8deg);
+        }
+
+        .bow.bottom-right {
+            bottom: 45px;
+            right: 55px;
+            transform: rotate(-8deg);
+        }
+
+
+        /* =========================
+           LITTLE DECORATIONS
+        ========================= */
+
+        .heart {
+            position: absolute;
+            color: #ec91b2;
+            font-size: 24px;
+        }
+
+        .heart.one {
+            top: 25%;
+            left: 25%;
+        }
+
+        .heart.two {
+            top: 28%;
+            right: 25%;
+        }
+
+        .heart.three {
+            bottom: 27%;
+            left: 27%;
+        }
+
+        .heart.four {
+            bottom: 25%;
+            right: 27%;
+        }
+
+        .sparkle {
+            position: absolute;
+            color: #ef91b2;
+            font-size: 25px;
+        }
+
+        .sparkle.one {
+            top: 22%;
+            left: 31%;
+        }
+
+        .sparkle.two {
+            top: 24%;
+            right: 31%;
+        }
+
+        .sparkle.three {
+            bottom: 29%;
+            left: 32%;
+        }
+
+        .sparkle.four {
+            bottom: 28%;
+            right: 32%;
+        }
+
+
+        /* =========================
+           TITLE AREA
+        ========================= */
+
+        .title-area {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 35px 80px 25px;
+        }
+
+
+        /* Decorative curved line around Happy Birthday */
+
+        .title-area::before {
+            content: "";
+            position: absolute;
+
+            width: 105%;
+            height: 125px;
+
+            border-top: 2px solid #ee8fb1;
+            border-bottom: 2px solid #ee8fb1;
+
+            border-radius: 50%;
+
+            top: 20px;
+            left: -2.5%;
+
+            transform: rotate(-2deg);
+
+            opacity: 0.8;
+        }
+
+
+        /* =========================
+           HAPPY BIRTHDAY
+        ========================= */
+
+        .happy {
+            position: relative;
+
+            font-family: "Ballet", cursive;
+
+            font-size: clamp(70px, 9vw, 125px);
+
+            font-weight: normal;
+
+            line-height: 0.8;
+
+            color: #e77da3;
+
+            text-shadow:
+                1px 2px 0 #f7c5d7,
+                0 3px 8px rgba(190, 80, 120, 0.12);
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           CHISOM
+        ========================= */
+
+        .name {
+            position: relative;
+
+            font-family: "Ballet", cursive;
+
+            font-size: clamp(80px, 11vw, 150px);
+
+            line-height: 0.9;
+
+            margin-top: 12px;
+
+            color: #dc6794;
+
+            text-shadow:
+                1px 2px 0 #f7c5d7,
+                0 4px 10px rgba(190, 80, 120, 0.13);
+
+            z-index: 2;
+        }
+
+
+        /* Heart beside Chisom */
+
+        .name-heart {
+            font-family: Georgia, serif;
+
+            font-size: 48px;
+
+            color: #e4779f;
+
+            display: inline-block;
+
+            margin-left: 12px;
+
+            transform: rotate(-8deg);
+        }
+
+
+        /* =========================
+           RIBBON UNDER NAME
+        ========================= */
+
+        .ribbon {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 18px;
+
+            margin-top: 12px;
+
+            color: #ed91b1;
+
+            font-size: 27px;
+        }
+
+        .ribbon-line {
+            width: 80px;
+            height: 1px;
+
+            background: #ed91b1;
+        }
+
+
+        /* =========================
+           MESSAGE
+        ========================= */
+
+        .message {
+            margin-top: 20px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-style: italic;
+
+            font-size: 22px;
+
+            letter-spacing: 0.5px;
+
+            color: #a95776;
+        }
+
+        .message-heart {
+            font-family: Georgia, serif;
+            font-style: normal;
+            color: #d96c95;
+        }
+
+
+        /* =========================
+           ENTER BUTTON
+        ========================= */
+
+        .enter-button {
+            margin-top: 25px;
+
+            padding: 14px 45px;
+
+            border: 2px solid #ee9fbd;
+
+            border-radius: 50px;
+
+            background: linear-gradient(
+                #fbd2e0,
+                #f5b5cc
+            );
+
+            color: #a94f70;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-style: italic;
+
+            font-size: 21px;
+
+            cursor: pointer;
+
+            text-decoration: none;
+display: inline-block;
+
+            box-shadow:
+                0 4px 10px rgba(190, 80, 120, 0.12),
+                inset 0 1px 2px white;
+
+            transition: 0.3s ease;
+        }
+
+        .enter-button:hover {
+            transform: scale(1.08);
+
+            box-shadow:
+                0 7px 18px rgba(190, 80, 120, 0.2);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .title-area {
+                padding: 30px 25px;
+            }
+
+            .happy {
+                font-size: 65px;
+            }
+
+            .name {
+                font-size: 75px;
+            }
+
+            .name-heart {
+                font-size: 30px;
+            }
+
+            .title-area::before {
+                width: 115%;
+                left: -7.5%;
+            }
+
+            .bow {
+                font-size: 35px;
+            }
+
+            .bow.top-left {
+                left: 15px;
+                top: 50px;
+            }
+
+            .bow.top-right {
+                right: 15px;
+                top: 50px;
+            }
+
+            .bow.bottom-left {
+                left: 15px;
+            }
+
+            .bow.bottom-right {
+                right: 15px;
+            }
+
+            .message {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Borders -->
+    <div class="lace top"></div>
+    <div class="lace bottom"></div>
+
+
+    <!-- Corner bows -->
+    <div class="bow top-left">🎀</div>
+    <div class="bow top-right">🎀</div>
+    <div class="bow bottom-left">🎀</div>
+    <div class="bow bottom-right">🎀</div>
+
+
+    <!-- Hearts -->
+    <div class="heart one">♡</div>
+    <div class="heart two">♡</div>
+    <div class="heart three">♡</div>
+    <div class="heart four">♡</div>
+
+
+    <!-- Sparkles -->
+    <div class="sparkle one">✦</div>
+    <div class="sparkle two">✧</div>
+    <div class="sparkle three">✦</div>
+    <div class="sparkle four">✧</div>
+
+
+    <!-- Main content -->
+
+    <main class="welcome">
+
+        <div class="title-area">
+
+            <div class="happy">
+                Happy Birthday
+            </div>
+
+            <div class="name">
+                Chisom
+                <span class="name-heart">♡</span>
+            </div>
+
+            <div class="ribbon">
+                <span class="ribbon-line"></span>
+                🎀
+                <span class="ribbon-line"></span>
+            </div>
+
+        </div>
+
+
+        <div class="message">
+            I made something special for you
+            <span class="message-heart">♡</span>
+        </div>
+
+
+        <a href="letter.html" class="enter-button">
+    Enter ♡
+</a>
+
+    </main>
+
+</body>
+
+</html>
